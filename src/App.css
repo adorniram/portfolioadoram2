@@ -1,0 +1,31 @@
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fade-in-up 1.2s ease-out;
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3510b9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #050f96;
+}
