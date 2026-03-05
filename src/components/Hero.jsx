@@ -25,20 +25,30 @@ function Hero() {
             </span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#parcours"
-              className="group px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-2"
-            >
-              Découvrir mes certifications
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+          <div className="flex flex-col gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#parcours"
+                className="group px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-2"
+              >
+                Découvrir mes formations
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-full hover:bg-white/20 border-2 border-white/30 transition-all"
+              >
+                Me contacter
+              </a>
+            </div>
 
             <a
-              href="#contact"
+              href="#"
+              download
               className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-full hover:bg-white/20 border-2 border-white/30 transition-all"
             >
-              Me contacter
+              Télécharger mon CV
             </a>
           </div>
         </div>
