@@ -44,8 +44,8 @@ function Hero() {
             </div>
 
             <a
-              href="#"
-              download
+              href="/CV Adoram .pdf"
+              download="CV Adoram.pdf"
               className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-full hover:bg-white/20 border-2 border-white/30 transition-all"
             >
               Télécharger mon CV
