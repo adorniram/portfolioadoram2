@@ -1,5 +1,4 @@
-import { ChevronRight, Award, Building, BookOpen, Code2, Download } from 'lucide-react';
-
+import { Award, Building, BookOpen, Code2 } from 'lucide-react';
 /* ---------- SKILL CARD ---------- */
 function SkillCard({ skill }) {
   return (
@@ -87,14 +86,6 @@ function Parcours() {
     { name: "Sécurité Web", description: "Bonnes pratiques." }
   ];
 
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/CV Adoram .pdf';
-    link.download = 'CV Adoram.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="pt-20">
@@ -166,30 +157,6 @@ function Parcours() {
             {skillsData.map((skill, i) => (
               <SkillCard key={i} skill={skill} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CALL TO ACTION */}
-      <section className="py-24 px-6 bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Intéressé par mon profil ?</h2>
-          <p className="text-xl mb-10 text-blue-100">
-            Téléchargez mon CV ou contactez-moi pour discuter de vos projets
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={handleDownloadCV}
-              className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:shadow-2xl hover:scale-105 transition-all"
-            >
-              Télécharger mon CV
-            </button>
-            <a
-              href="#contact"
-              className="px-8 py-4 bg-white/20 border border-white rounded-full text-white inline-flex items-center justify-center"
-            >
-              Me contacter
-            </a>
           </div>
         </div>
       </section>

@@ -23,10 +23,11 @@ function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 text-blue-400">Navigation</h4>
             <ul className="space-y-3">
-              <li><a href="#accueil" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Accueil</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Accueil</a></li>
               <li><a href="#about" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> À propos</a></li>
               <li><a href="#projets" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Projets</a></li>
               <li><a href="#competences" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Compétences</a></li>
+              <li><a href="#parcours" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Parcours</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Contact</a></li>
             </ul>
           </div>

@@ -38,6 +38,7 @@ function Header() {
           <a href="#about" onClick={() => setMenuOpen(false)} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg">À propos</a>
           <a href="#competences" onClick={() => setMenuOpen(false)} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg">Compétences</a>
           <a href="#projets" onClick={() => setMenuOpen(false)} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg">Projets</a>
+          <a href="#parcours" onClick={() => setMenuOpen(false)} className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors hover:bg-blue-50 rounded-lg">Parcours</a>
           <a href="#contact" onClick={() => setMenuOpen(false)} className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all">Contact</a>
         </nav>
       </div>

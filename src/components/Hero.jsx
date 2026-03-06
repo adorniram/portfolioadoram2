@@ -2,7 +2,7 @@ import { ChevronRight } from 'lucide-react';
 
 function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden" id="accueil">
+    <section className="relative w-full h-screen overflow-hidden" id="home">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-indigo-900/60 to-purple-900/70 z-10"></div>
 
       <img 
@@ -44,7 +44,7 @@ function Hero() {
             </div>
 
             <a
-              href="/CV Adoram .pdf"
+              href="/CV%20Adoram.pdf"
               download="CV Adoram.pdf"
               className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-full hover:bg-white/20 border-2 border-white/30 transition-all"
             >
