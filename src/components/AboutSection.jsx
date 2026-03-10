@@ -2,7 +2,7 @@ import { Code2, ChevronRight } from 'lucide-react';
 
 function AboutSection() {
   return (
-    <section className="py-24 px-6 bg-white" id="about">
+    <section className="py-24 px-6 bg-white dark:bg-gray-900" id="about">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -11,15 +11,15 @@ function AboutSection() {
               À propos de moi
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-6">
               Etudiant réseaux et sécurité informatique 
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
              Étudiant en Réseau et Sécurité Informatique, je me forme aux fondamentaux des systèmes, des réseaux et de la cybersécurité. Mon parcours académique me permet d’acquérir une solide compréhension des infrastructures informatiques, de la sécurité des données et des bonnes pratiques de protection des systèmes. En parallèle, je travaille comme développeur web à temps partiel, ce qui me permet d’appliquer concrètement mes connaissances techniques.
             </p>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               Mon approche combine rigueur technique, créativité et attention aux détails pour livrer
               des produits qui dépassent les attentes. Je crois au code propre, à l'expérience utilisateur
               optimale et à l'apprentissage continu.
@@ -28,15 +28,15 @@ function AboutSection() {
             <div className="grid grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-                <div className="text-sm text-gray-600">Projets réalisés</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Projets réalisés</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-                <div className="text-sm text-gray-600">Technologies maîtrisées</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Technologies maîtrisées</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">2+</div>
-                <div className="text-sm text-gray-600">Années d'expérience</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Années d'expérience</div>
               </div>
             </div>
             

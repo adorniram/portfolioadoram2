@@ -2,7 +2,7 @@ import { Heart, ChevronRight, MapPin, Phone, Mail, Github, Linkedin, Twitter } f
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white pt-20 pb-8" id="contact">
+    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 dark:from-gray-800 dark:via-gray-900 dark:to-black text-white pt-20 pb-8" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
@@ -23,11 +23,11 @@ function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 text-blue-400">Navigation</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Accueil</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> À propos</a></li>
-              <li><a href="#projets" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Projets</a></li>
-              <li><a href="#competences" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Compétences</a></li>
-              <li><a href="#parcours" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Parcours</a></li>
+              <li><a href="#home" className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Accueil</a></li>
+              <li><a href="#about" className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> À propos</a></li>
+              <li><a href="#projets" className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Projets</a></li>
+              <li><a href="#competences" className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Compétences</a></li>
+              <li><a href="#parcours" className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Parcours</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"><ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Contact</a></li>
             </ul>
           </div>
@@ -67,8 +67,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+        <div className="border-t border-white/10 dark:border-gray-700 pt-8 text-center">
+          <p className="text-gray-400 dark:text-gray-300 text-sm">
             &copy; 2025 Mon Portfolio. Tous droits réservés. | Conçu avec passion et créativité
           </p>
         </div>

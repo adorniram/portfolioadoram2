@@ -88,9 +88,11 @@ function Parcours() {
 
 
   return (
-    <div className="pt-20">
+    // anchor target for InfoSection "Voir plus" button
+    // adding scroll-mt to compensate for fixed headers (if any)
+    <div id="parcours" className="pt-20 scroll-mt-20">
       {/* TIMELINE */}
-      <section id="timeline" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section id="timeline" className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
@@ -139,7 +141,7 @@ function Parcours() {
       </section>
 
       {/* SKILLS */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">

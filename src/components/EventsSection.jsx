@@ -2,7 +2,7 @@ import { Calendar, Clock, ChevronRight, ExternalLink, Github } from 'lucide-reac
 
 function ProjectCard({ title, date, duration, description, image, category, demoLink, githubLink }) {
   return (
-    <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
+    <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
       <div className="relative h-48 overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
         <div className="absolute top-4 left-4 px-4 py-1.5 bg-blue-500 text-white text-sm font-semibold rounded-full">
@@ -10,8 +10,8 @@ function ProjectCard({ title, date, duration, description, image, category, demo
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
-        <div className="flex items-center gap-4 mb-4 text-gray-600">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+        <div className="flex items-center gap-4 mb-4 text-gray-600 dark:text-gray-300">
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             <span className="text-sm font-medium">{date}</span>
@@ -21,16 +21,16 @@ function ProjectCard({ title, date, duration, description, image, category, demo
             <span className="text-sm font-medium">{duration}</span>
           </div>
         </div>
-        <p className="text-gray-600 leading-relaxed mb-6">{description}</p>
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">{description}</p>
         <div className="flex gap-3">
           {demoLink && (
-            <button className="flex-1 text-blue-600 font-semibold flex items-center justify-center gap-2 hover:gap-3 transition-all border border-blue-200 rounded-lg py-2 hover:bg-blue-50">
+            <button className="flex-1 text-blue-600 font-semibold flex items-center justify-center gap-2 hover:gap-3 transition-all border border-blue-200 rounded-lg py-2 hover:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-700">
               Démo
               <ExternalLink className="w-4 h-4" />
             </button>
           )}
           {githubLink && (
-            <button className="flex-1 text-gray-700 font-semibold flex items-center justify-center gap-2 hover:gap-3 transition-all border border-gray-200 rounded-lg py-2 hover:bg-gray-50">
+            <button className="flex-1 text-gray-700 dark:text-gray-300 font-semibold flex items-center justify-center gap-2 hover:gap-3 transition-all border border-gray-200 dark:border-gray-700 rounded-lg py-2 hover:bg-gray-50 dark:hover:bg-gray-700">
               Code
               <Github className="w-4 h-4" />
             </button>
@@ -76,7 +76,7 @@ function ProjectsSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50" id="projets">
+    <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900" id="projets">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Réalisations</span>

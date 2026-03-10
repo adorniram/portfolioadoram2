@@ -10,6 +10,27 @@ import './App.css'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [theme, setTheme] = useState('light');
+
+  // initialize theme from localStorage or prefers-color-scheme
+  useEffect(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || saved === 'light') {
+      setTheme(saved);
+    } else {
+      const mql = window.matchMedia('(prefers-color-scheme: dark)');
+      setTheme(mql.matches ? 'dark' : 'light');
+    }
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -33,8 +54,27 @@ function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // when switching between home and parcours pages, reset scroll position
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // if we just switched to home because of a section hash (e.g. "competences"),
+    // wait a tick for the content to render then scroll to the target element.
+    const hash = window.location.hash.slice(1);
+    if (currentPage === 'home' && hash && !['home', 'parcours'].includes(hash)) {
+      // slight delay to allow DOM update
+      setTimeout(() => {
+        const target = document.getElementById(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 50);
+    }
+  }, [currentPage]);
+
   return (
-    <div className="overflow-x-hidden">
+    // root container handles global light/dark coloring
+    <div className="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
       <style>{`
         @keyframes fade-in-up {
           from {
@@ -69,7 +109,7 @@ function App() {
         }
       `}</style>
       
-      <Header />
+      <Header theme={theme} toggleTheme={toggleTheme} />
       
       {currentPage === 'home' && (
         <>
