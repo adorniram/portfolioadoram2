@@ -16,7 +16,7 @@ function AboutSection() {
             </h2>
 
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-             Étudiant en Réseau et Sécurité Informatique, je me forme aux fondamentaux des systèmes, des réseaux et de la cybersécurité. Mon parcours académique me permet d’acquérir une solide compréhension des infrastructures informatiques, de la sécurité des données et des bonnes pratiques de protection des systèmes. En parallèle, je travaille comme développeur web à temps partiel, ce qui me permet d’appliquer concrètement mes connaissances techniques.
+              Étudiant en Réseau et Sécurité Informatique, je me forme aux fondamentaux des systèmes, des réseaux et de la cybersécurité. Mon parcours académique me permet d’acquérir une solide compréhension des infrastructures informatiques, de la sécurité des données et des bonnes pratiques de protection des systèmes. En parallèle, je travaille comme développeur web à temps partiel, ce qui me permet d’appliquer concrètement mes connaissances techniques.
             </p>
 
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
@@ -59,19 +59,24 @@ function AboutSection() {
               className="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]"
             />
 
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
+            {/* CARD CORRIGÉE */}
+            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl transition-colors duration-300">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                   <Code2 className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <div className="font-bold text-gray-900">Philosophie</div>
-                  <div className="text-sm text-gray-600">Travail & Créativité</div>
+                  <div className="font-bold text-gray-900 dark:text-gray-100">
+                    Philosophie
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">
+                    Travail & Créativité
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>

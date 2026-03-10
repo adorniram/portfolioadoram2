@@ -28,12 +28,17 @@ function Hero() {
           <div className="flex flex-col gap-4 justify-center items-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#parcours"
-                className="group px-8 py-4 bg-white text-blue-700 font-bold rounded-full hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-2"
-              >
-                Découvrir mes formations
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+  href="#parcours"
+  className="group px-8 py-4 
+             bg-white text-blue-700 
+             dark:bg-gray-800 dark:text-gray-200
+             font-bold rounded-full 
+             hover:shadow-2xl hover:scale-105 
+             transition-all flex items-center justify-center gap-2"
+>
+  Découvrir mes formations
+  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+</a>
 
               <a
                 href="#contact"

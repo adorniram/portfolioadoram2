@@ -1,16 +1,22 @@
-import { Award, Building, BookOpen, Code2 } from 'lucide-react';
+import { Code2 } from 'lucide-react';
+
 /* ---------- SKILL CARD ---------- */
 function SkillCard({ skill }) {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl hover:shadow-xl transition-all">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 h-full">
       <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mb-4">
         <Code2 className="text-white" />
       </div>
-      <h3 className="text-xl font-bold mb-2">{skill.name}</h3>
-      <p className="text-gray-600">{skill.description}</p>
+      <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">
+        {skill.name}
+      </h3>
+      <p className="text-gray-600 dark:text-gray-300">
+        {skill.description}
+      </p>
     </div>
   );
 }
+
 
 /* ---------- PARCOURS ---------- */
 function Parcours() {
@@ -87,81 +93,104 @@ function Parcours() {
   ];
 
 
-  return (
-    // anchor target for InfoSection "Voir plus" button
-    // adding scroll-mt to compensate for fixed headers (if any)
-    <div id="parcours" className="pt-20 scroll-mt-20">
-      {/* TIMELINE */}
-      <section id="timeline" className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-              mes formations 
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">
-              Ma Trajectoire Professionnelle
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Découvrez les étapes clés qui ont façonné mon développement professionnel
-            </p>
-          </div>
+ return (
+  // anchor target for InfoSection "Voir plus" button
+  // adding scroll-mt to compensate for fixed headers (if any)
+  <div id="parcours" className="pt-20 scroll-mt-20">
+    {/* TIMELINE */}
+    <section
+      id="timeline"
+      className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+            mes formations
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-4">
+            Ma Trajectoire Professionnelle
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Découvrez les étapes clés qui ont façonné mon développement professionnel
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {timelineData.map((item, i) => (
-              <div key={i} className="flex flex-col">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 h-full">
-                  <div className={`flex items-center gap-2 font-semibold mb-3 ${item.color}`}>
-                    {item.logo ? (
-                      <img src={item.logo} alt="logo" className="w-8 h-8 object-contain" />
-                    ) : (
-                      <item.icon className="w-5 h-5" />
-                    )}
-                    {item.category}
-                  </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {timelineData.map((item, i) => (
+            <div key={i} className="flex flex-col">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 h-full">
+                <div
+                  className={`flex items-center gap-2 font-semibold mb-3 ${item.color}`}
+                >
+                  {item.logo ? (
+                    <img
+                      src={item.logo}
+                      alt="logo"
+                      className="w-8 h-8 object-contain"
+                    />
+                  ) : (
+                    <item.icon className="w-5 h-5" />
+                  )}
+                  {item.category}
+                </div>
 
-                  <h3 className="text-2xl font-bold mb-3 text-gray-800">{item.title}</h3>
-                  <p className="text-gray-600 mb-3">{item.organization}</p>
-                  <p className="text-gray-700 mb-4 leading-relaxed">{item.description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-3">
+                  {item.organization}
+                </p>
+                <p className="text-gray-700 dark:text-gray-400 mb-4 leading-relaxed">
+                  {item.description}
+                </p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {item.skills.map((skill, idx) => (
-                      <span
-                        key={idx}
-                        className={`text-sm px-3 py-1 rounded-full ${item.color.replace('text-', 'bg-').replace('-600', '-100')} ${item.color.replace('-600', '-700')}`}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {item.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className={`text-sm px-3 py-1 rounded-full ${item.color.replace(
+                        'text-',
+                        'bg-'
+                      ).replace('-600', '-100')} ${item.color.replace(
+                        '-600',
+                        '-700'
+                      )}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
+  
 
-      {/* SKILLS */}
-      <section className="py-24 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-              Expertise technique
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">
-              Compétences Principales
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Un ensemble de compétences techniques et créatives pour des projets ambitieux
-            </p>
-          </div>
+           {/* SKILLS */}
+<section className="py-24 bg-white dark:bg-gray-800">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+        Expertise technique
+      </span>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-4">
+        Compétences Principales
+      </h2>
+      <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Un ensemble de compétences techniques et créatives pour des projets ambitieux
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillsData.map((skill, i) => (
-              <SkillCard key={i} skill={skill} />
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {skillsData.map((skill, i) => (
+        <SkillCard key={i} skill={skill} />
+      ))}
+    </div>
+  </div>
+</section>
+    
     </div>
   );
 }

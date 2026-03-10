@@ -80,7 +80,7 @@ function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Réalisations</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Projets Récents</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-3 mb-4">Projets Récents</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">Une sélection de mes projets les plus récents et innovants</p>
         </div>
         
