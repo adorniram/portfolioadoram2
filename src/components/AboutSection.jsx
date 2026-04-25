@@ -1,6 +1,16 @@
 import { Code2, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 function AboutSection() {
+  const [visits, setVisits] = useState(null);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/stats')
+      .then(res => res.json())
+      .then(data => setVisits(data.totalVisits))
+      .catch(() => setVisits('Erreur'));
+  }, []);
+
   return (
     <section className="py-24 px-6 bg-white dark:bg-gray-900" id="about">
       <div className="max-w-7xl mx-auto">
@@ -38,6 +48,10 @@ function AboutSection() {
                 <div className="text-4xl font-bold text-blue-600 mb-2">2+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">Années d'expérience</div>
               </div>
+            </div>
+            {/* Affichage du nombre de visites (exemple API) */}
+            <div className="mb-4 text-gray-700 dark:text-gray-200">
+              <b>Visites du site :</b> {visits === null ? 'Chargement...' : visits}
             </div>
             
             {/*  BOUTON CORRIGÉ */}

@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection'
 import EventsSection from './components/EventsSection'
 import Footer from './components/Footer'
 import Parcours from './pages/Parcours'
+import ApiDemo from './components/ApiDemo'
 import './App.css'
 
 function App() {
@@ -73,60 +74,14 @@ function App() {
   }, [currentPage]);
 
   return (
-    // root container handles global light/dark coloring
-    <div className="overflow-x-hidden bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      <style>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slow-zoom {
-          from {
-            transform: scale(1);
-          }
-          to {
-            transform: scale(1.1);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 1.2s ease-out;
-        }
-        
-        .animate-slow-zoom {
-          animation: slow-zoom 20s ease-in-out infinite alternate;
-        }
-        
-        html {
-          scroll-behavior: smooth;
-        }
-      `}</style>
-      
+    <div>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      
-      {currentPage === 'home' && (
-        <>
-          <Hero />
-          <AboutSection />
-          <InfoSection />
-          <EventsSection />
-          <Footer />
-        </>
-      )}
-      
-      {currentPage === 'parcours' && (
-        <>
-          <Parcours />
-          <Footer />
-        </>
-      )}
+      <Hero />
+      <InfoSection />
+      <AboutSection />
+      <EventsSection />
+      <ApiDemo />
+      <Footer />
     </div>
   );
 }
