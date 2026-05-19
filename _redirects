@@ -1,0 +1,5 @@
+# Forcer HTTPS et gérer les routes SPA
+http://*/* https://:splat 301!
+
+# Redirection de toutes les routes vers index.html pour une SPA
+/* /index.html 200
