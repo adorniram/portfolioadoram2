@@ -6,7 +6,6 @@ import AboutSection from './components/AboutSection'
 import EventsSection from './components/EventsSection'
 import Footer from './components/Footer'
 import Parcours from './pages/Parcours'
-import ApiDemo from './components/ApiDemo'
 import './App.css'
 
 function App() {
@@ -76,11 +75,16 @@ function App() {
   return (
     <div>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
-      <InfoSection />
-      <AboutSection />
-      <EventsSection />
-      <ApiDemo />
+      {currentPage === 'parcours' ? (
+        <Parcours />
+      ) : (
+        <>
+          <Hero />
+          <InfoSection />
+          <AboutSection />
+          <EventsSection />
+        </>
+      )}
       <Footer />
     </div>
   );
